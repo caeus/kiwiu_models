@@ -11,9 +11,11 @@ lazy val root = (project in file("."))
     resolvers += "jitpack" at "https://jitpack.io",
     libraryDependencies ++= Seq(
       scalaTest % Test,
-      "com.github.caeus" % "sumba" % "971be80"
+      "com.fasterxml.jackson.core" % "jackson-core" % "2.9.9",
+      "org.projectlombok" % "lombok" % "1.18.10" % "provided",
     ),
     addCompilerPlugin("org.scalamacros" % "paradise" % "2.1.1" cross CrossVersion.full)
+
   )
 
 // See https://www.scala-sbt.org/1.x/docs/Using-Sonatype.html for instructions on how to publish to Sonatype.
